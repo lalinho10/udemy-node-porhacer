@@ -1,4 +1,4 @@
-const colors = require('colors');
+const colors = require('colors/safe');
 
 const argv = require('./configuracion/yargs').argv;
 
