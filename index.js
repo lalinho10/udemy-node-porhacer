@@ -21,7 +21,7 @@ switch (comando) {
         console.log(colors.green('C - Completas'));
         console.log(colors.blue('\n******************************'));
 
-        let listaTareas = tareasPorHacer.getLista();
+        let listaTareas = tareasPorHacer.getLista(argv.completa);
 
         for (let tarea of listaTareas) {
             console.log(`${ tarea.completa ? colors.green('(C)') : colors.yellow('(P)') } - ${ tarea.descripcion }`);

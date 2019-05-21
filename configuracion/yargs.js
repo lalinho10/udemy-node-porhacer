@@ -7,7 +7,9 @@ const argv =
     .command('crear', 'Crea una tarea pendiente por hacer', {
         descripcion
     })
-    .command('listar', 'Muestra la lista de tareas pendientes por hacer', {})
+    .command('listar', 'Muestra la lista de tareas pendientes por hacer', {
+        completa: { alias: 'c', desc: 'Bandera que indica si la tarea ya fue hecha o no' }
+    })
     .command('actualizar', 'Actualiza una tarea pendiente por hacer', {
         descripcion,
         completa

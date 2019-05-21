@@ -1,5 +1,7 @@
 const fs = require('fs');
 
+const colors = require('colors');
+
 let listaTareas = [];
 
 const cargarBD = () => {
@@ -31,8 +33,13 @@ const crear = (descripcion) => {
     return tarea;
 }
 
-const getLista = () => {
+const getLista = (completa) => {
     cargarBD();
+
+    if (completa !== undefined) {
+        listaTareas = listaTareas.filter(tarea => tarea.completa === (completa === 'true'));
+    }
+
     return listaTareas;
 }
 
